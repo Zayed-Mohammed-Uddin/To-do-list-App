@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TODOLIST APP</title>
+		<link rel="stylesheet" href="./dist/output.css" />
+	</head>
+	<body class="dark:bg-slate-900">
+		<section
+			class="container flex items-center justify-center min-h-screen flex-col px-5"
+		>
+			<h1 class="text-3xl font-semibold text-center mb-2 text-white">
+				To-Do-List-<span class="text-red-600">App</span>
+			</h1>
+			<h6 class="text-sm text-center font-semibold text-white mb-10">
+				Created by
+				<a class="hover:underline" href="https://zayed-mohammed-uddin.github.io/My-Portfolio/"
+					>Zayed</a
+				>
+			</h6>
+			<div
+				class="input flex sm:flex-col items-center justify-center gap-x-10 sm:gap-y-10"
+			>
+				<div class="input_groups">
+					<input
+						class="focus:outline-none bg-transparent border-2 rounded-lg px-5 py-3 me-4 text-white"
+						type="text"
+						name="text"
+						id="text_box"
+						placeholder="Type Your Task"
+						required
+					/>
+					<input
+						class="focus:outline-none bg-transparent border-2 rounded-lg px-5 py-3 text-white"
+						type="date"
+						name="date"
+						id="date"
+						required
+					/>
+				</div>
+				<div class="button_groups">
+					<button
+						type="submit"
+						class="bg-green-600 shadow-lg px-5 py-3 rounded-lg text-white me-4 hover:bg-green-900 duration-500"
+						id="btn_add"
+					>
+						Add
+					</button>
+					<!-- <button
+						class="bg-red-600 shadow-lg px-5 py-3 rounded-lg text-white hover:bg-red-900 duration-500"
+						type="submit"
+						id="btn_delete"
+					>
+						Delete
+					</button> -->
+				</div>
+			</div>
+
+			<div class="tasks_container flex flex-col gap-y-5"></div>
+		</section>
+		<script src="./app.js"></script>
+	</body>
+</html>

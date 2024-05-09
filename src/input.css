@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+	:root {
+		--primaryFontFamily: "Poppins", sans-serif;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: var(--primaryFontFamily);
+	}
+	.input {
+		@apply mb-5;
+	}
+	input::placeholder {
+		@apply text-white;
+	}
+	.tasks_container {
+		width: 585px;
+	}
+
+	.tasks_container div {
+		@apply text-white font-normal text-xl tracking-wide flex items-center justify-between gap-x-24;
+	}
+
+	.tasks_container div .btn_delete {
+		@apply bg-red-600 shadow-lg px-5 py-3 rounded-lg text-white hover:bg-red-900 duration-500 text-lg font-normal;
+	}
+
+	@media screen and (min-width: 280px) and (max-width: 640px) {
+		.input {
+			@apply flex-col gap-y-10;
+		}
+		.input_groups {
+			@apply flex;
+		}
+		.tasks_container {
+			width: 100%;
+		}
+	}
+}
